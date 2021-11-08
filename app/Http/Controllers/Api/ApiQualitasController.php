@@ -40,7 +40,7 @@ class ApiQualitasController extends QualitasController
 		} 
 		catch (Exception $e) 
 		{
-			response()->json(['error' => $e->getMessage()], 500);
+			return response()->json(['error' => $e->getMessage()], 500);
 		}
 	}
 	public function download(Request $req)
@@ -62,7 +62,22 @@ class ApiQualitasController extends QualitasController
 		}
 		catch(Exception $e)
 		{
-			response()->json(['error' => $e->getMessage()], 500);
+			return response()->json(['error' => $e->getMessage()], 500);
+		}
+	}
+	public function uploadFtp(Request $req)
+	{
+		try
+		{
+			$data = (object)$req->json()->all();
+			$this->checkCredentials($data);
+			$res = $this->upload($req);
+			
+			return response()->json(['message' => 'Archivo subido correctamente']);
+		}
+		catch(Exception $e)
+		{
+			return response()->json(['error' => $e->getMessage()], 500);
 		}
 	}
 }

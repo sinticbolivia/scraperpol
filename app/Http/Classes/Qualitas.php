@@ -297,10 +297,6 @@ class Qualitas extends Scraper implements IScraper
 		$ftp_user	= 'docsconsiliaciones@plataformacreatsol.com';
 		$ftp_pass	= '+4ilZKCVg3C~';
 		
-		//$ftp_server = 'sinticbolivia.net';
-		//$ftp_user	= 'sinticbo';
-		//$ftp_pass	= base64_decode('T1QjeWttTTUqN0UwbTA=');
-		
 		$ftp = new Ftp($ftp_server);
 		if( !$ftp->login($ftp_user, $ftp_pass) )
 			throw new Exception('FTP login error');

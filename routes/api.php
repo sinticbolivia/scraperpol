@@ -23,4 +23,5 @@ Route::prefix('qualitas')->group(function()
 	Route::get('/', [ApiQualitasController::class, 'list']);
 	Route::post('/', [ApiQualitasController::class, 'list']);
 	Route::post('/download', [ApiQualitasController::class, 'download']);
+	Route::post('/upload-ftp', [ApiQualitasController::class, 'uploadFtp']);
 });
