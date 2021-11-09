@@ -7,6 +7,7 @@
 			<table class="table table-sm table-bordered table-striped">
 			<thead>
 			<tr>
+				<td>Nro.</td>
 				<th>Clave</th>
 				<th>Descripcion</th>
 				<th>Fecha</th>

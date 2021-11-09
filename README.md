@@ -28,7 +28,7 @@ credentials -> son las credenciales de acceso al portal qualitas con el siguient
 
 #### Descarga de excel de un registro
 	
-POST /api/download
+POST /api/qualitas/download
 
 BODY
 
@@ -52,7 +52,7 @@ format -> base64 | bin
 #### Subir archivo a FTP
 
 
-POST /api/upload-ftp?data=[clave],[fecha]
+POST /api/qualitas/upload-ftp?data=[clave],[fecha]
 
 BODY
 
